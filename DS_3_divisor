@@ -1,1 +1,31 @@
 
+{
+	public static void main (String[] args) {
+		//code
+		Scanner scan= new Scanner(System.in);
+	    int t,a=0,b,m,n,temp;
+	    t = scan.nextInt();
+	    for(int k=0;k<t;k++){
+	        n=scan.nextInt();
+	        b=0;
+	        for(int i=2;i<=n;i++){
+	            a=0;
+	            for(int j=2;j<=Math.sqrt(i);j++)
+	            {
+	                if(i%j==0)
+	                {
+	                    if(i/j==j)
+	                       a++;
+	                    else
+	                       a+=2;
+	                }
+	                if(a>=2)
+	                  break;
+	            }
+	            if(a==1)
+	              b++;
+	        }
+	        System.out.println(b);
+	    }
+	}
+}
